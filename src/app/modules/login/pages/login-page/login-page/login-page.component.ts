@@ -38,7 +38,7 @@ export class LoginPageComponent implements OnInit {
     if(this.loginForm.value.username === 'ahmed'&& this.loginForm.value.password ==='123456')
     {
         localStorage.setItem('loggedIn', 'true');
-        this.router.navigate(['/home']);
+        this.router.navigate(['/Main/Home']);
 
     }
     else{

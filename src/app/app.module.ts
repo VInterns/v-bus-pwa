@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './shared/componant/page-not-found/page-no
 import { LoginService } from './core/http/login.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  import { MaterialModule } from './shared/materialModule';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MainComponent,
     LoginPageComponent,
     PageNotFoundComponent,
-    
+    HomePageComponent,
     ],
   imports: [
     BrowserModule,
