@@ -40,9 +40,11 @@ export class LoginPageComponent implements OnInit {
         localStorage.setItem('loggedIn', 'true');
         this.router.navigate(['/home']);
 
-    }else{
-        localStorage.setItem('loggedIn', 'false');
+    }
+    else{
 
+        localStorage.setItem('loggedIn', 'false');
+        this.message = 'Username / Password is invalid';
     }
     // this.loginService.onLogin(this.loginForm.value).subscribe(logged => {
     //   console.log(logged);
