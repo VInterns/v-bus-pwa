@@ -13,6 +13,7 @@ import { LoginService } from './core/http/login.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  import { MaterialModule } from './shared/materialModule';
 import { HomePageComponent } from './home-page/home-page.component';
+import { ToBookComponent } from './to-book/to-book/to-book.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     LoginPageComponent,
     PageNotFoundComponent,
     HomePageComponent,
+    ToBookComponent,
     ],
   imports: [
     BrowserModule,

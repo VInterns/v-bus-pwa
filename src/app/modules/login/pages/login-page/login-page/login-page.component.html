@@ -1,5 +1,5 @@
 
-<div  fxLayout="row" fxLayoutAlign="center" style="text-align:center;">
+<div   style="text-align:center;">
 <br>
     <p>Login</p>
     <br>
@@ -8,15 +8,14 @@
 
     <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
 
-<div fxLayout="column" >
-    <div fxFlex>
-
+<div  >
+    <div >
         <mat-form-field  appearance="fill">
       <mat-label>username</mat-label>
       <input matInput formControlName="username" type="text">
     </mat-form-field>
 </div>
-<div fxFlex >
+<div  >
     <mat-form-field appearance="fill">
         <mat-label>password</mat-label>
         <input matInput  formControlName="password"type="password" >

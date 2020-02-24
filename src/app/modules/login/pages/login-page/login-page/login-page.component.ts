@@ -41,7 +41,8 @@ export class LoginPageComponent implements OnInit {
         this.router.navigate(['/Main/Home']);
 
     }
-    else{
+    else
+    {
 
         localStorage.setItem('loggedIn', 'false');
         this.message = 'Username / Password is invalid';

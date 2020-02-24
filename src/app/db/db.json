@@ -1,8 +1,43 @@
 {
-    "users": [
-      { "username": "ahmed", "password": "123456" },
-      { "username": "mohamed", "password": "1234567" },
-      { "username": "mosllas", "password": "12345678" }
-    ]
+  "users": [
+    {
+      "username": "ahmed",
+      "password": "123456"
+    },
+    {
+      "username": "mohamed",
+      "password": "1234567"
+    },
+    {
+      "username": "mosllas",
+      "password": "12345678"
+    }
+  ],
+  "Trips": [
+    {
+      "id": 2,
+      "To": "Work",
+      "From": "Home",
+      "Pickup_point": "Ain shams",
+      "Date": "12/02/2020  9:30pm",
+      "Building": "Smart"
+     },
+    {
+      "id": 3,
+      "To": "Home",
+      "From": "smart",
+      "Pickup_point": "Ain shams",
+      "Date": "12/02/2020  6:30pm",
+      "Building":"HQ"
+      },
+    {
+      "id": 4,
+      "To": "Work",
+      "From": "Home",
+      "Pickup_point": "Ain shams",
+      "Date": "13/02/2020  9:30pm",
+      "Building":"Smart"
+}]
 }
   
+

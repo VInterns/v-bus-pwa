@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/core/http/login.service';
+import { Router } from '@angular/router';
 
 
 
@@ -11,9 +13,23 @@ import { Component, OnInit } from '@angular/core';
 
 export class MainComponent implements OnInit {
  
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    private loginService: LoginService,
+    private router: Router
+  ) { 
+    
   }
 
+  ngOnInit(): void 
+  {
+  }
+
+
+  logout()
+
+  {
+  localStorage.setItem('loggedIn', 'false');
+  this.router.navigate(['']);
+
+  }
 }

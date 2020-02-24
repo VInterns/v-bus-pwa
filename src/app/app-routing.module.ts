@@ -9,7 +9,7 @@ import { ToBookComponent } from './to-book/to-book/to-book.component';
 
 
 const routes: Routes = [
-  {path:'Main',component:MainComponent,
+  {path:'Main',component:MainComponent,canActivate:[AuthGuardService],
 
   children: [
     {

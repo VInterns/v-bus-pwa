@@ -1,7 +1,11 @@
 <div class="example-button-row" style="text-align: center;" >
-    <button  mat-fab color="Red" style=" height: 20%;width: 20%;background-color: red; color: white; "  >Book a Trip</button>
+  <br>
+  <br>
+  <br>
+  
+  <button routerLink="/Main/tobook" mat-fab color="Red" style=" height: 20%;width: 20%;background-color: red; color: white; "  >Book a Trip</button>
 </div>
-<div style="text-align:center;">
+<div style="text-align:center;margin-left: 10%;margin-right: 10%;">
 
    <br>
    <br>
@@ -9,8 +13,14 @@
    <br>
    <br>   
    <br>
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >   
+    <table mat-table [dataSource]="trips" class="mat-elevation-z8" >   
     
+      <!-- <ng-container matColumnDef="ID">
+        <th mat-header-cell *matHeaderCellDef style="text-align:center;" > #  </th>
+        <td mat-cell *matCellDef="let element"> {{element.ID}} </td>
+      </ng-container> -->
+
+
         <ng-container matColumnDef="To">
           <th mat-header-cell *matHeaderCellDef style="text-align:center;" > To  </th>
           <td mat-cell *matCellDef="let element"> {{element.To}} </td>
@@ -33,7 +43,7 @@
       
         <ng-container matColumnDef="Action">
             <th mat-header-cell *matHeaderCellDef style="text-align:center;"> Action </th>
-            <td mat-cell *matCellDef="let element"> <a style="color: red; text-align:left ;">Delete</a>
+            <td mat-cell *matCellDef="let element"> <button mat-stroked-button color="accent" style="color: red ; " (click)="onDeleteTrip(element.id)" >Delete</button>
           </ng-container>
 
 

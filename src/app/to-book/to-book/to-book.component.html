@@ -1,0 +1,212 @@
+<div style="text-align:center;    margin-left:10%; 
+margin-right:20%;" class="example-container"  >
+    <form  >
+   
+        <div>
+            <div>
+
+                <mat-radio-group aria-label="From">
+                    <h1 > From</h1>  
+
+                     <mat-radio-button  value="1" (click)="officeFormDisplay();" color="accent" >Office </mat-radio-button>
+                    <mat-radio-button  value="2" style="margin-left: 2em;" (click)="homeFormDisplay();">Home</mat-radio-button>
+
+                  </mat-radio-group>
+                </div>
+<br>
+<br>
+        </div>
+   
+        <div *ngIf="officeform" >            
+            <h1 style="text-align: initial;margin-right: 3%;display:inline-block; ">From </h1>             
+            <h2 style="display:inline-block;margin-right: 5%;">Bulding</h2>
+            
+            <mat-form-field style="display:inline-block;width: 13%;">
+                <mat-label>plese select the Buliding</mat-label>
+                <mat-select>
+                  <mat-option value="Smart" (click)="onsmartselect()">Smart</mat-option>
+                  <mat-option value="HQ" (click)="  onHQselect()">HQ</mat-option>
+                </mat-select>
+                  </mat-form-field>
+        <div *ngIf="smart">
+        <Div  >
+            <h2 style=" text-align:initial;margin-right: 0.90%;margin-left:8% ;display:inline-block">Sub-Bulding</h2>
+            <mat-form-field style="display:inline-block;width: 13%;margin-left: .90%;">
+              <mat-label>plese select the Sub-Buliding</mat-label>
+              <mat-select>
+                <mat-option value="C">C2/C3</mat-option>
+                <mat-option value="Hub">Hub/Hub2</mat-option  >
+              </mat-select>
+            </mat-form-field>
+        </Div>
+        <div>
+            <h1 style="text-align: initial;margin-right: 14%;display:inline-block; ">Shift</h1>
+            
+            <mat-form-field style="display:inline-block;width: 13%;">
+              <mat-label>plese select the Shift</mat-label>
+              <mat-select>
+                <mat-option value="7:45">17:35</mat-option>
+                <mat-option value="8:45">18:35</mat-option>
+                <mat-option value="9:45">19:35</mat-option>
+                <mat-option value="10:45">20:35</mat-option>
+                <mat-option value="11:45">21:35</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>   
+          
+          <div>
+            <h1 style="text-align: initial;margin-right: 5.6%;display:inline-block; ">To</h1>
+            <h2 style="display:inline-block;margin-right: 5%;text-align: initial">Zone</h2>
+            <mat-form-field style="display:inline-block;width: 13%;margin-left: 1.5%;">
+              <mat-label>plese select the Zone</mat-label>
+              <mat-select>
+                <mat-option value="sherton">sherton</mat-option>
+                <mat-option value="octobar">octobar</mat-option>
+                <mat-option value="madint-nasr">madinet nasr</mat-option>
+                <mat-option value="Ain-Shams">Ain Shams</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div> 
+          <Div  >
+            <h2 style=" text-align:initial;margin-right: 3%;margin-left:8% ;display:inline-block">Route</h2>
+            <mat-form-field style="display:inline-block;width: 13%;margin-left: 3.25%;">
+              <mat-label>plese select the Route</mat-label>
+              <mat-select>
+                <mat-option value="sherton">sherton</mat-option>
+                <mat-option value="octobar">octobar</mat-option>
+                <mat-option value="madint-nasr">madinet nasr</mat-option>
+                <mat-option value="Ain-Shams">Ain Shams</mat-option>
+
+
+              </mat-select>
+            </mat-form-field>
+        </Div>
+
+        
+        <div>
+          <h2 style=" text-align:initial;margin-right: 0.90%;margin-left:8% ;display:inline-block">Pickup point</h2>
+          <mat-form-field style="display:inline-block;width: 13%;margin-left: 0.90%;">
+            <mat-label>plese select the Pickup</mat-label>
+            <mat-select>
+              <mat-option value="sherton">salam</mat-option>
+              <mat-option value="octobar">hosary</mat-option>
+              <mat-option value="madint-nasr"> 3bas</mat-option>
+              <mat-option value="Ain-Shams">ahmed assmat</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div> 
+        <div>
+          <h1 style="text-align: initial;margin-right: 6.8%;display:inline-block; ">Date</h1>             
+          <mat-form-field  style="display:inline-block;width: 13%;margin-left: 7.5%;">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <button mat-raised-button color="accent" style="background-color: red;color: white;">Continue</button>
+
+        </div>
+
+       
+        </div>
+        <div *ngIf="homeform"  >
+          <h1 style="text-align: initial;margin-right: 5.5%;display:inline-block; ">To </h1>             
+          <h2 style="display:inline-block;margin-right: 5%;">Bulding</h2>
+          
+          <mat-form-field style="display:inline-block;width: 13%;">
+              <mat-label>plese select the Buliding</mat-label>
+              <mat-select>
+                <mat-option value="Smart" (click)="onsmartselect()">Smart</mat-option>
+                <mat-option value="HQ" (click)="  onHQselect()">HQ</mat-option>
+              </mat-select>
+                </mat-form-field>
+      <div *ngIf="smart">
+      <Div  >
+          <h2 style=" text-align:initial;margin-right: 0.90%;margin-left:8% ;display:inline-block">Sub-Bulding</h2>
+          <mat-form-field style="display:inline-block;width: 13%;margin-left: .90%;">
+            <mat-label>plese select the Sub-Buliding</mat-label>
+            <mat-select>
+              <mat-option value="C">C2/C3</mat-option>
+              <mat-option value="Hub">Hub/Hub2</mat-option  >
+            </mat-select>
+          </mat-form-field>
+      </Div>
+      <div>
+          <h1 style="text-align: initial;margin-right: 14%;display:inline-block; ">Shift</h1>
+          
+          <mat-form-field style="display:inline-block;width: 13%;">
+            <mat-label>plese select the Shift</mat-label>
+            <mat-select>
+              <mat-option value="7:45">8:45</mat-option>
+              <mat-option value="8:45">8:45</mat-option>
+              <mat-option value="9:45">9:45</mat-option>
+              <mat-option value="10:45">10:45</mat-option>
+              <mat-option value="11:45">11:45</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>   
+        
+        <div>
+          <h1 style="text-align: initial;margin-right: 3%;display:inline-block; ">From</h1>
+          <h2 style="display:inline-block;margin-right: 5.5%;text-align: initial;">Zone</h2>
+          <mat-form-field style="display:inline-block;width: 13%;margin-left: 1.5%;">
+            <mat-label>plese select the Zone</mat-label>
+            <mat-select>
+              <mat-option value="sherton">sherton</mat-option>
+              <mat-option value="octobar">octobar</mat-option>
+              <mat-option value="madint-nasr">madinet nasr</mat-option>
+              <mat-option value="Ain-Shams">Ain Shams</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div> 
+        <Div  >
+          <h2 style=" text-align:initial;margin-right: 3%;margin-left:8% ;display:inline-block">Route</h2>
+          <mat-form-field style="display:inline-block;width: 13%;margin-left: 3.25%;">
+            <mat-label>plese select the Route</mat-label>
+            <mat-select>
+              <mat-option value="sherton">sherton</mat-option>
+              <mat-option value="octobar">octobar</mat-option>
+              <mat-option value="madint-nasr">madinet nasr</mat-option>
+              <mat-option value="Ain-Shams">Ain Shams</mat-option>
+
+
+            </mat-select>
+          </mat-form-field>
+      </Div>
+
+      
+      <div>
+        <h2 style=" text-align:initial;margin-right: 0.90%;margin-left:8% ;display:inline-block">Pickup point</h2>
+        <mat-form-field style="display:inline-block;width: 13%;margin-left: 0.90%;">
+          <mat-label>plese select the Pickup</mat-label>
+          <mat-select>
+            <mat-option value="sherton">salam</mat-option>
+            <mat-option value="octobar">hosary</mat-option>
+            <mat-option value="madint-nasr"> 3bas</mat-option>
+            <mat-option value="Ain-Shams">ahmed assmat</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div> 
+      <div>
+        <h1 style="text-align: initial;margin-right: 6.8%;display:inline-block; ">Date</h1>             
+        <mat-form-field  style="display:inline-block;width: 13%;margin-left: 7.5%;">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="accent" style="background-color: red;color: white;">Continue</button>
+
+      </div>
+          
+        </div>
+   
+    </form>
+
+</div>
